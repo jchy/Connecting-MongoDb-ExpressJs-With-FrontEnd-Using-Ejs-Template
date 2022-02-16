@@ -15,8 +15,8 @@ router.get("/:user_id", getUser)
 
 router.get("/code/:code", getUserByCode)
 
-
-router.post("/", ...validateUser(), upload.single("avatar") , createUser)
+// router.post("/", ...validateUser(), upload.single("avatar") , createUser)
+router.post("/", upload.single("avatar") , createUser)
 
 router.delete("/:user_id", deleteUser)
 

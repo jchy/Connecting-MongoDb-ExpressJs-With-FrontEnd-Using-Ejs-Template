@@ -1,12 +1,15 @@
 const express = require('express');
 const {validationResult} = require('express-validator');
+
 const router= express.Router();
+
 const User= require('../models/user.model');
 const upload = require('../utils/fileUpload');
 const validateUser = require("../utils/validateUser");
 
 // ? pagination
 // ? limit, skip
+
 const getAllUsers= async (req,res)=>{
     try{
         const per_page = req.query.per_page || 2;
